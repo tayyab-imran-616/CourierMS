@@ -74,5 +74,8 @@ a:hover { color: #e05a00; }
 /* FORM CARDS */
 .form-card { border: 1px solid #eceef2; border-radius: 12px; }
 
+/* STAT CARDS */
+.stat-card { border: 1px solid #eceef2; border-radius: 12px; }
+
 /* FOOTER */
 footer a:hover { color: #fff !important; }

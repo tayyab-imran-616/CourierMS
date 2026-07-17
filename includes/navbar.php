@@ -27,6 +27,15 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 </li>
 
                 <?php if (isLoggedIn()): ?>
+                    <?php
+                        $dashboardLink = BASE_URL . '/index.php';
+                        if (currentRole() == 'admin') $dashboardLink = BASE_URL . '/admin/dashboard.php';
+                        if (currentRole() == 'agent') $dashboardLink = BASE_URL . '/agent/dashboard.php';
+                        if (currentRole() == 'customer') $dashboardLink = BASE_URL . '/user/dashboard.php';
+                    ?>
+                    <li class="nav-item mt-2 mt-lg-0">
+                        <a class="btn btn-outline-light btn-sm" href="<?php echo $dashboardLink; ?>">Dashboard</a>
+                    </li>
                     <li class="nav-item mt-2 mt-lg-0 ms-lg-2">
                         <a class="btn btn-warning btn-sm text-dark fw-semibold" href="<?php echo BASE_URL; ?>/includes/auth.php?logout=1">Logout</a>
                     </li>
