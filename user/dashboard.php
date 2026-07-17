@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/helpers.php';
 
 if (!isLoggedIn() || currentRole() != 'customer') {
     header('Location: ' . BASE_URL . '/login.php');
@@ -32,11 +33,6 @@ foreach ($shipments as $s) {
     if ($s['status'] == 'Booked') $booked++;
 }
 
-function statusBadge($status) {
-    if ($status == 'Delivered') return 'bg-success';
-    if ($status == 'In Transit' || $status == 'Out for Delivery') return 'bg-warning text-dark';
-    return 'bg-secondary';
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

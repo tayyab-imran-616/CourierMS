@@ -77,5 +77,9 @@ a:hover { color: #e05a00; }
 /* STAT CARDS */
 .stat-card { border: 1px solid #eceef2; border-radius: 12px; }
 
+/* SECTION PILLS */
+.nav-pills .nav-link { color: #10182b; font-weight: 500; }
+.nav-pills .nav-link.active { background-color: var(--brand-orange); color: #fff; }
+
 /* FOOTER */
 footer a:hover { color: #fff !important; }
